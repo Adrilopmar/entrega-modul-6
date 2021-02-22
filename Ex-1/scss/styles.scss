@@ -1,0 +1,227 @@
+/*---------------------------variables*/
+$negre: #03071e;
+$verd-pastel:#D0D38F; //fons principal
+$bordes-titols: #674014; 
+$paddingseccio: 70px 0;
+
+/*---------------------- mixins*/
+@mixin titol {
+    padding-bottom: 2vw;
+    border-bottom: 1px solid $bordes-titols; 
+    font-weight:bold;
+}
+@mixin sub-titol {
+    padding-bottom: 1vw;
+    border-bottom: 1px solid $bordes-titols;
+    font-weight:bold;
+}
+
+
+/*- ---------------------------contingut*/
+body{
+    background-color: rgba( $color: $verd-pastel, $alpha: 0.7) ;
+    font-family: Rubik;
+    
+}
+/* ------------------------------header */
+/*--------------------------------Logo */
+.logo{
+    margin: 0;
+    display: flex;
+}
+.red-soc{
+    color:$negre;
+    font-size: 32px;
+    margin-top: 5vw;
+    margin:5vw 1vw 0 1vw;
+}
+/*--------------------------------navigation bar */
+.menu{
+    margin-left: 3vw;
+    .nav-link{
+        border-bottom: 1px solid rgba($color: white, $alpha: 0);
+    }
+}
+.modal-backdrop{
+    z-index: -1;
+}
+.modal{
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
+/*--------------------- formulari registre */
+.finestra-log{
+    input{
+        margin-bottom: 5px;
+    }
+}
+.finestra-nous{
+    display: none;
+    input{
+        margin-bottom: 5px;
+    }
+}
+
+/* -------------------------------- hover navigation bar */
+.nav-link:hover{
+    border-bottom: 1px solid $bordes-titols;
+}
+/*---------------------------------- slide*/ 
+.carousel-inner{
+    h5{
+        font-size: 36px;
+    }
+    p{
+        font-size: 20px;
+        
+    }
+}
+/*----------------------------- Sobre nosaltres */
+.historia-nostre{
+    padding: $paddingseccio;
+}
+.nosaltres{
+    width: 90%;
+    margin: 0 auto;
+    h2{
+        @include titol();
+        
+    }
+    .apartat-historia{
+        margin-top: 4vw;
+        h4{
+            @include sub-titol()
+        }
+    }
+    #desplegar{
+        display: none;
+    }
+}
+.certificats{
+    width: 90%;
+    padding-top: 10vw;
+    h4{
+        @include sub-titol();
+        margin-bottom: 4vw;
+    }
+    .artesania{
+        border-radius: 100%;
+    }
+}
+/*----------------------------------- productes destacats*/
+.contenidor-productes{
+    background-color: rgba($color:#CED189, $alpha:.6);
+    // background-color: rgba($color:#E2CBA2, $alpha:1);
+    // background-color: rgba($color:#F4C67B, $alpha:0.5);
+    .productes{
+        width: 90%;
+        padding: $paddingseccio;
+        
+        h2{
+            @include titol();
+        }
+        .oferta{
+            margin-top: 4vw;
+        }
+        .botiga{
+            padding: 1vw;
+            margin: 4vw auto
+        }
+        a{
+            text-decoration: none;
+            color: $negre;
+            
+        }
+        .producte-dest{
+            margin-top: 2vw;
+            padding: 7px;
+            border: 1px solid rgba($color:$bordes-titols, $alpha:1);
+        }
+    }
+}
+/*-----------------------------hovers productes*/ 
+ .producte-dest:hover{
+     opacity: 0.7;
+     
+ }
+ /*----------------------- fires i mercats*/
+ .fires-i-mercats{
+    background-color: rgba($color:#C3C66C, $alpha:.8);
+ }
+ .mercats{
+     width: 90%;
+     padding: $paddingseccio;
+     h2{
+         @include titol();
+     }
+     h4{
+         margin: 3vw 0;
+     }
+     .mapa{
+         margin: 1vw 0;
+         border-bottom: 1px solid $bordes-titols;
+         div{
+             padding: 1vw  0 ;
+         }
+     }
+ }
+ /*----------------------- footer*/
+footer{
+    background-color:#343a40 ;
+    color: #878F97;
+    
+    .mes-info-mbl{
+    text-decoration: none;
+    color: #878F97;
+    }
+    .separadors-footers div{
+    //   margin-top: 1vw;
+
+    }
+    h3{
+        font-size: 18px;
+        font-weight: bold;
+        @include titol();
+        border-color: #878F97;
+    }
+    p{
+        font-size: 12px;
+    }
+    .contacte i{
+        font-size: 14px;
+        margin: 0 1vw;
+    }
+    .reds-socials {
+        a{
+            text-decoration: none;
+        }
+        i{
+            font-size: 24px;
+            margin: 1vw;
+        }
+        
+    }
+    .copyright{
+        font-size: 12px;
+    }
+}
+
+/*------------------------ hover links reds socials (footer i header)*/
+.fa-twitter, .fa-twitter-square{
+    color:#1da1f2;
+}
+.fa-facebook-square{
+    color: #3b5998;
+}
+.fa-instagram, .fa-instagram-square{
+    color: #c13584;
+}
+.fa-pinterest-square{
+    color: #e60023;
+
+}
+.hover-social{
+    opacity: .7;
+}
+.hover-social:hover{
+    opacity: 1;
+}
